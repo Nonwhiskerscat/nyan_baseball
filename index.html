@@ -7,44 +7,216 @@
     <meta name="Description" content="숫자야구게임">
     <meta name="Author" content="Seoyong Kim">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/webfont.css">
     <link rel="stylesheet" href="./css/index.css">
     <script src="./js/inputMaker.js"></script>
     <script src="./js/startCheck.js"></script>
     <script src="./js/randNumber.js"></script>
-    <script src="./js/button.js"></script>
+    <script src="./js/gameLauncher.js"></script>
     <script src="./js/attackNumber.js"></script>
-    <script src="./js/autoInput.js"></script>
     <script src="./js/gameBoard.js"></script>
-    
+    <script src="./js/clearInput.js"></script>
+    <script src="./js/numberCheck.js"></script>
+    <script src="./js/autofocus.js"></script>
+    <script src="./js/randomValue.js"></script>
+    <script src="./js/totalScore.js"></script>
+    <script src="./js/systemScore.js"></script>
     <title>숫자야구게임</title>
 </head>
 <body>
     <div class="bighead">
-        <h1>숫자 야구 게임</h1>
-        <div class="part1">
-            <label for="goyang">자릿수를 입력하세요(2~9)</label>
-            <input type="number" id="goyang">
-            <button id="kidcat1">게임 시작</button>
-        </div> <!--part1-->
+        <div class="container">
+            <div class="first_screen">
+                <h1>숫자 야구 게임</h1>
+                <div class="part1">
+                    <div class="first_flex">
+                        <div class="first_title">
+                            <p>자릿수를 선택하세요!</p>
+                        </div>
+                        <div id="cat">
+                            <button name="goyang" value="2">2</button>
+                            <button name="goyang" value="3">3</button>
+                            <button name="goyang" value="4">4</button>
+                            <button name="goyang" value="5">5</button>
+                            <button name="goyang" value="6">6</button>
+                            <button name="goyang" value="7">7</button>
+                            <button name="goyang" value="8">8</button>
+                            <button name="goyang">R</button>
+                        </div>
+                    </div><!--first_flex-->
 
-        <div class="part2">
-            <div class="kitty">
-                <!--이곳에는 숫자 입력을 받는 input이 들어갑니다.-->
-            </div>
-        </div> <!--part2-->
-        <button id="kidcat2">공격</button>
+                    <div class="first_btn">
+                        <div class="btn1 how">
+                            <div class="btn1_flex">
+                                <img src="./img/part1/how_icon.png" alt="">
+                                <p>게임 방법</p>
+                            </div>
+                        </div>
 
-        <div class="part3">
-            <button id="kidcat3">포기하기</button>
-        </div> <!--part3-->
+                        <div class="btn1 ind">
+                            <div class="btn1_flex">
+                                <img src="./img/part1/ind_icon.png" alt="">
+                                <p>개발자 페이지</p>
+                            </div>
+                        </div>
 
-        <div class="part4">
-            <div class="input_box">
-                <!--이곳에는 게임 과정 및 결과가 들어갑니다.-->
-            </div>
-        </div> <!--part4-->
 
+                    </div>
+    
+                </div> <!--part1-->
+            </div><!--first_screen-->
+    
+            <div class="second_screen">
+                
+            </div><!--second_screen-->
+    
+            <div class="third_screen">
+
+                <div class="part1">
+                    <h2>숫자를 입력해 주세요.</h2>
+
+                    <div class="third_flex">
+                        <div class="kitty">
+                            <!--이곳에는 숫자 입력을 받는 input이 들어갑니다.-->
+                        </div>
+                        <div class="btn">
+                            <button id="kidcat2">공격</button>
+                        </div>
+                    </div><!--"third_flex"-->
+                </div>
         
+                <div class="part3">
+                    <div class="output_box">
+                        <div class="output_flex">
+                            <div>
+                                <h3>Input</h3>
+                                <p><!--input이 들어감-->2022445</p>
+                            </div>
+
+                            <div>
+                                <h3>Out</h3>
+                                <ul class="strike_count">
+                                    <li class="circle"></li>
+                                    <li class="circle"></li>
+                                    <li class="circle"></li>
+
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h3>Ball</h3>
+                                <ul class="ball_count">
+                                    <li class="circle"></li>
+                                    <li class="circle"></li>
+                                    <li class="circle"></li>
+                                    <li class="circle"></li>
+                                    <li class="circle"></li>
+                                    <li class="circle"></li>
+                                    <li class="circle"></li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h3>Strike</h3>
+                                <ul class="strike_count">
+                                    <li class="circle"></li>
+                                    <li class="circle"></li>
+                                    <li class="circle"></li>
+                                    <li class="circle"></li>
+                                    <li class="circle"></li>
+                                    <li class="circle"></li>
+                                    <li class="circle"></li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div> <!--part30-->
+
+                <div class="info">
+                    <div class="part4">
+                        <h3>기록실</h3>
+                        <div class="result_box">
+                            <table class="result_t">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+    
+                                <tr>
+                                    <th scope="col">횟수</th>
+                                    <th scope="col">입력숫자</th>
+                                    <th scope="col">BALL</th>
+                                    <th scope="col">STRIKE</th>
+                                    <th scope="col">OUT</th>                            
+                                </tr>
+    
+                                <!-- <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr> -->
+                            </table>
+                        </div>
+                    </div> <!--part4-->
+
+                    <div class="semi_info">
+                        <div class="part5">
+                            <h3>힌트보기</h3>
+                            <div class="store">
+                                <div class="out">
+                                    <p>외야석</p>
+                                    <button>-1500</button>
+                                </div>
+
+                                <div class="out">
+                                    <p>내야석</p>
+                                    <button>-4000</button>
+                                </div>
+
+                                <div class="out">
+                                    <p>테이블석</p>
+                                    <button>-8000</button>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="part6">
+                            <div id="kidcat3">
+                                <div class="giveup_flex">
+                                    <img src="./img/part3/give_up.png" alt="#">
+                                    <p>여기까지 왔잖아.~<br>
+                                    포기는 아직 이르다고 ㅠㅠ</p>
+                                </div>
+                            </div>
+
+                        </div> <!--part6-->
+                    </div>
+            
+
+                </div>
+        
+
+
+                <div class="part7">
+                    <div class="sc_board">
+                        <p>score</p>
+                        <div class="score">
+                            <!--이곳에는 게임 점수가 들어갑니다.-->
+                        </div>
+                    </div>
+                </div><!--part7-->
+
+
+            </div><!--third_screen-->
+    
+        </div>
 
     </div>
 </body>

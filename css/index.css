@@ -1,16 +1,520 @@
-.kitty_flex {
+@charset "UTF-8";
+/*====================터닝 포인트====================*/
+/*====================폰트====================*/
+/*====================마진====================*/
+/*====================폰트 사이즈====================*/
+/*====================터닝 포인트====================*/
+/*====================폰트====================*/
+/*====================마진====================*/
+/*====================폰트 사이즈====================*/
+/*====================터닝 포인트====================*/
+/*====================폰트====================*/
+/*====================마진====================*/
+/*====================폰트 사이즈====================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bighead {
   display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/part1/phone_back.png);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-width: 905px) {
+  .bighead {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/part1/semi_back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .bighead {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/part1/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
-.kitties {
-  text-align: center;
+html, body {
+  color: white;
+  font-family: "IBMPlexSansKR-Regular";
 }
 
-#catnum {
-  background-color: mintcream;
-  width: 50px;
-  height: 50px;
+h1 {
+  font-family: "Yeongdo-Rg";
+}
+
+h2 {
+  font-family: "Yeongdo-Rg";
+}
+
+h3 {
+  font-family: "Yeongdo-Rg";
+}
+
+h4 {
+  font-family: "Yeongdo-Rg";
+}
+
+h5 {
+  font-family: "Yeongdo-Rg";
+}
+
+h6 {
+  font-family: "Yeongdo-Rg";
+}
+
+table, th, tr, td {
+  border: none;
+  border-collapse: collapse;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+input, button {
+  outline: none;
+}
+
+.container {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 905px) {
+  .container {
+    width: 93.75%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1180px;
+  }
+}
+
+/*====================터닝 포인트====================*/
+/*====================폰트====================*/
+/*====================마진====================*/
+/*====================폰트 사이즈====================*/
+body {
+  position: relative;
+}
+
+.first_screen h1 {
   text-align: center;
-  font-size: 20px;
+  font-size: calc(28px + 3vw);
+  color: white;
+}
+@media screen and (min-width: 905px) {
+  .first_screen h1 {
+    font-size: calc(40px + 3vw);
+  }
+}
+@media screen and (min-width: 1400px) {
+  .first_screen h1 {
+    font-size: 110px;
+  }
+}
+.first_screen h3 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.first_screen .part1 {
+  margin-top: 40px;
+}
+@media screen and (min-width: 905px) {
+  .first_screen .part1 {
+    margin-top: 50px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .first_screen .part1 {
+    margin-top: 60px;
+  }
+}
+.first_screen .first_flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1400px) {
+  .first_screen .first_flex {
+    flex-direction: row;
+  }
+}
+.first_screen .first_flex .first_title {
+  width: 100%;
+}
+@media screen and (min-width: 1400px) {
+  .first_screen .first_flex .first_title {
+    width: 580px;
+  }
+}
+.first_screen .first_flex .first_title p {
+  font-family: "Yeongdo-Rg";
+  color: white;
+  text-align: center;
+  font-size: calc(24px + 1vw);
+}
+@media screen and (min-width: 905px) {
+  .first_screen .first_flex .first_title p {
+    font-size: calc(32px + 1vw);
+  }
+}
+@media screen and (min-width: 1400px) {
+  .first_screen .first_flex .first_title p {
+    text-align: justify;
+    font-size: 60px;
+  }
+}
+.first_screen .first_flex #cat {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+@media screen and (min-width: 905px) {
+  .first_screen .first_flex #cat {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .first_screen .first_flex #cat {
+    width: 580px;
+    align-items: center;
+    margin-top: 0;
+  }
+}
+.first_screen .first_flex #cat button {
+  cursor: pointer;
+  color: white;
+  width: 23%;
   border-radius: 10px;
+  background-color: transparent;
+  border: 4px solid white;
+  font-family: "IBMPlexSansKR-Regular";
+  font-size: calc(40px + 2vw);
+  line-height: calc(40px + 2vw);
+  margin-bottom: 10px;
+  padding: calc(15px + 1vw) 0;
+}
+@media screen and (min-width: 905px) {
+  .first_screen .first_flex #cat button {
+    width: 11%;
+    font-size: calc(40px + 2vw);
+    line-height: calc(20px + 2vw);
+  }
+}
+@media screen and (min-width: 1400px) {
+  .first_screen .first_flex #cat button {
+    width: 120px;
+    height: 120px;
+    border: 5px solid white;
+    font-size: 95px;
+    line-height: 95px;
+    padding: 0;
+  }
+}
+.first_screen .first_flex #cat button:hover {
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.5s;
+}
+.first_screen .first_btn {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 85%;
+  margin-top: 40px;
+  max-width: 400px;
+}
+@media screen and (min-width: 905px) {
+  .first_screen .first_btn {
+    width: 60%;
+    margin-top: 60px;
+    max-width: none;
+    min-width: 500px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .first_screen .first_btn {
+    margin-top: 95px;
+    min-width: none;
+    width: 830px;
+  }
+}
+.first_screen .first_btn .btn1_flex {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.first_screen .first_btn .btn1_flex img {
+  width: calc(30px + 2vw);
+  margin-right: 10px;
+}
+@media screen and (min-width: 905px) {
+  .first_screen .first_btn .btn1_flex img {
+    font-size: calc(30px + 1vw);
+  }
+}
+@media screen and (min-width: 1400px) {
+  .first_screen .first_btn .btn1_flex img {
+    text-align: justify;
+  }
+}
+.first_screen .first_btn .btn1_flex p {
+  font-family: "Yeongdo-Rg";
+  color: white;
+  text-align: center;
+  font-size: calc(16px + 1vw);
+}
+@media screen and (min-width: 905px) {
+  .first_screen .first_btn .btn1_flex p {
+    font-size: calc(24px + 1vw);
+  }
+}
+@media screen and (min-width: 1400px) {
+  .first_screen .first_btn .btn1_flex p {
+    text-align: justify;
+  }
+}
+
+.third_screen .part1 h2 {
+  font-size: calc(24px + 2vw);
+  font-family: "Yeongdo-Rg";
+  color: white;
+  text-align: center;
+}
+.third_screen .part1 .third_flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+@media screen and (min-width: 905px) {
+  .third_screen .part1 .third_flex {
+    margin-top: 20px;
+  }
+}
+.third_screen .part1 .third_flex .kitty .kitty_flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.third_screen .part1 .third_flex .kitty .kitty_flex .kitties {
+  text-align: center;
+}
+.third_screen .part1 .third_flex .kitty .kitty_flex .kitties #catnum {
+  background-color: transparent;
+  border: 3px solid #fff;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  width: calc(20px + 5vw);
+  height: calc(20px + 5vw);
+  font-size: calc(24px + 1vw);
+  line-height: calc(24px + 1vw);
+  border-radius: 10px;
+  margin-right: 10px;
+  font-family: "IBMPlexSansKR-Light";
+}
+@media screen and (min-width: 905px) {
+  .third_screen .part1 .third_flex .kitty .kitty_flex .kitties #catnum {
+    border: 4px solid #fff;
+    width: calc(30px + 5vw);
+    height: calc(30px + 5vw);
+    border-radius: 15px;
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .third_screen .part1 .third_flex .kitty .kitty_flex .kitties #catnum {
+    border: 5px solid #fff;
+    width: 100px;
+    height: 100px;
+    margin-right: 30px;
+    border-radius: 20px;
+    font-size: 80px;
+    line-height: 80px;
+  }
+}
+.third_screen .part1 .third_flex .btn button {
+  display: block;
+  background-color: transparent;
+  color: #fff;
+  border: 3px solid white;
+  width: calc(30px + 5vw);
+  height: calc(20px + 5vw);
+  border-radius: 10px;
+  font-family: "Yeongdo-Rg";
+  font-size: calc(20px + 1vw);
+}
+@media screen and (min-width: 905px) {
+  .third_screen .part1 .third_flex .btn button {
+    border: 4px solid white;
+    width: calc(40px + 5vw);
+    height: calc(30px + 5vw);
+    border-radius: 15px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .third_screen .part1 .third_flex .btn button {
+    width: 140px;
+    height: 100px;
+    border: 5px solid white;
+    border-radius: 20px;
+  }
+}
+.third_screen .part1 .third_flex .btn button:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #333;
+  transition: all 0.5s linear;
+}
+.third_screen .part3 {
+  margin-top: 50px;
+}
+@media screen and (min-width: 905px) {
+  .third_screen .part3 {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .third_screen .part3 {
+    margin-top: 70px;
+  }
+}
+.third_screen .part3 .output_box .output_flex {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.third_screen .part3 .output_box .output_flex div {
+  width: 50%;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 905px) {
+  .third_screen .part3 .output_box .output_flex div {
+    width: 50%;
+    margin-bottom: 35px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .third_screen .part3 .output_box .output_flex div {
+    width: 25%;
+    margin-bottom: 40px;
+  }
+}
+.third_screen .part3 .output_box .output_flex div h3 {
+  font-size: calc(24px + 1vw);
+}
+@media screen and (min-width: 905px) {
+  .third_screen .part3 .output_box .output_flex div h3 {
+    font-size: calc(24px + 1vw);
+  }
+}
+@media screen and (min-width: 1400px) {
+  .third_screen .part3 .output_box .output_flex div h3 {
+    font-size: 40px;
+  }
+}
+.third_screen .part3 .output_box .output_flex div p {
+  font-family: "IBMPlexSansKR-Light";
+  font-size: calc(18px + 1vw);
+  margin-top: 7.5px;
+  letter-spacing: 2px;
+}
+@media screen and (min-width: 905px) {
+  .third_screen .part3 .output_box .output_flex div p {
+    font-size: calc(24px + 1vw);
+    margin-top: 9px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .third_screen .part3 .output_box .output_flex div p {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+}
+.third_screen .part3 .output_box .output_flex div ul {
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+@media screen and (min-width: 905px) {
+  .third_screen .part3 .output_box .output_flex div ul {
+    font-size: calc(24px + 1vw);
+    margin-top: 18px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .third_screen .part3 .output_box .output_flex div ul {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+}
+.third_screen .part3 .output_box .output_flex div ul li {
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.5;
+  margin-right: 3px;
+  width: calc(12px + 0.5vw);
+  height: calc(12px + 0.5vw);
+}
+@media screen and (min-width: 905px) {
+  .third_screen .part3 .output_box .output_flex div ul li {
+    margin-right: 4px;
+    width: calc(16px + 0.5vw);
+    height: calc(16px + 0.5vw);
+  }
+}
+@media screen and (min-width: 1400px) {
+  .third_screen .part3 .output_box .output_flex div ul li {
+    width: 20px;
+    height: 20px;
+  }
+}
+.third_screen .part3 .output_box .output_flex div ul li:last-child {
+  margin-right: 0;
+}
+.third_screen .info {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1400px) {
+  .third_screen .info {
+    flex-direction: row;
+  }
+}
+.third_screen .info .semi_info {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 905px) {
+  .third_screen .info .semi_info {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .third_screen .info .semi_info {
+    flex-direction: column;
+  }
 }

@@ -1,4 +1,6 @@
 function numberChecker(input1, input2, len){
+    let ball=0;
+    let strike=0;
     for(let k=0;k<len;k++){
         for(let l=0;l<len;l++){
             if(input1[k]==input2[l]){
@@ -14,11 +16,10 @@ function numberChecker(input1, input2, len){
     else if(strike==len) {
         alert('축하합니다. 승리하셨습니다.');
         return true;
+        
     }
     else {
         alert(`볼: ${ball} 스트라이크: ${strike}`);
-        ball=0;
-        strike=0;
         return false;
     }
 
