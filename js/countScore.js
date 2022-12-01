@@ -1,34 +1,36 @@
-function totalScore(cat) {
+function countScore(cat, neko) {
     let score=0;
     switch(cat) {
         case 2:
-        score=2000;
+        score=100;
         break;
 
         case 3:
-        score=5000;
+        score=120;
         break;
 
         case 4:
-        score=10000;
+        score=150;
         break;
 
         case 5:
-        score=20000;
+        score=200;
         break;
 
         case 6:
-        score=40000;
+        score=250;
         break;
 
         case 7:
-        score=70000;
+        score=300;
         break;
 
-        default: score=100000;
+        default: score=400;
         
     }
+
+    neko-=score;
     
-    return score;
+    return neko;
 }
 

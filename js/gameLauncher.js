@@ -13,34 +13,58 @@ window.addEventListener('load', function() {
 
     let comAttack=[];
     let meow = 0;
-    let score = 0;
+    let tscore = 0;
+    let play = 0;
+    let myOut = 0;
 
     [].forEach.call(start,function(start){
         start.addEventListener('click', function() {
-            meow=this.value;
+            meow=Number(this.value);
             if(!meow) {
                 meow=randomValue();
             }
             let com=startCheck(meow);
-            console.log(com);
             comAttack=[...com];
             console.log(comAttack);
             $first.style.display="none";
             $third.style.display="block";
             $bighead.style.alignItems="flex-start";
-            score=totalScore(meow);
-            console.log(score);
+            tscore=totalScore(meow);
+            scoreBoard(tscore);
+            countMaker(meow);
+            
+            
         })
     }); 
 
     attack.addEventListener('click', function() {
+
+        play++;
+
         let myAttack=attackNumber(meow);
+        let myStrike=strikeCount(comAttack, myAttack, meow);
+        let myBall=ballCount(comAttack, myAttack, meow);
+
+        console.log(myBall);
+
+
         console.log(myAttack);
-        numberChecker(comAttack,myAttack,meow);
-        gameBoard(meow);
+        // tscore=numberChecker(comAttack, myAttack, meow, tscore);
+
+        scoreBoard(tscore);
+        gameBoard(play, myAttack, myBall, myStrike, myOut);
 
         for(let i=0;i<meow;i++) {
             document.querySelector(`.num_${i+1}`).value='';
+        }
+
+        if(!(myStrike||myBall)) {
+            alert('아웃!');
+            myOut++;
+        }
+
+        if(myOut==3) {
+            alert('게임이 종료되었습니다!');
         }
     })
 
