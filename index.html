@@ -31,6 +31,8 @@
     <script src="./js/ballCount.js"></script>
     <script src="./js/strikeCount.js"></script>
     <script src="./js/outCount.js"></script>
+    <script src="./js/dashBoard.js"></script>
+    <script src="./js/countLight.js"></script>
     <title>숫자야구게임</title>
 </head>
 <body>
@@ -98,17 +100,17 @@
                 <div class="part3">
                     <div class="output_box">
                         <div class="output_flex">
-                            <div>
+                            <div class="attack">
                                 <h3>Input</h3>
-                                <p><!--input이 들어감-->2022445</p>
+                                <p><!--input이 들어감-->-</p>
                             </div>
 
                             <div>
                                 <h3>Out</h3>
                                 <ul class="out_count">
-                                    <li class="circle"></li>
-                                    <li class="circle"></li>
-                                    <li class="circle"></li>
+                                    <li class="circle" id="ocircle_1"></li>
+                                    <li class="circle" id="ocircle_2"></li>
+                                    <li class="circle" id="ocircle_3"></li>
                                 </ul>
                             </div>
 
@@ -143,22 +145,26 @@
                                     <col>
                                     <col>
                                 </colgroup>
-    
-                                <tr>
-                                    <th scope="col">횟수</th>
-                                    <th scope="col" class="feline">입력숫자</th>
-                                    <th scope="col">BALL</th>
-                                    <th scope="col">STRIKE</th>
-                                    <th scope="col">OUT</th>                            
-                                </tr>
-    
-                                <!-- <tr>
-                                    <td>횟수</td>
-                                    <td>입력된 수</td>
-                                    <td>Ball</td>
-                                    <td>Strike</td>
-                                    <td>Out</td>
-                                </tr> -->
+
+                                <thead>
+                                    <tr>
+                                        <th scope="col">횟수</th>
+                                        <th scope="col" class="feline">입력숫자</th>
+                                        <th scope="col">BALL</th>
+                                        <th scope="col">STRIKE</th>
+                                        <th scope="col">OUT</th>                            
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <!-- <tr>
+                                        <td>횟수</td>
+                                        <td>입력된 수</td>
+                                        <td>Ball</td>
+                                        <td>Strike</td>
+                                        <td>Out</td>
+                                    </tr> -->
+                                </tbody>
 
                             </table>
                         </div>

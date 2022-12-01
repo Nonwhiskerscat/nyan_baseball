@@ -16,6 +16,7 @@ window.addEventListener('load', function() {
     let tscore = 0;
     let play = 0;
     let myOut = 0;
+    let outArr= ['원','투','쓰리'];
 
     [].forEach.call(start,function(start){
         start.addEventListener('click', function() {
@@ -41,31 +42,46 @@ window.addEventListener('load', function() {
 
         play++;
 
+        offLight();
+        
         let myAttack=attackNumber(meow);
         let myStrike=strikeCount(comAttack, myAttack, meow);
         let myBall=ballCount(comAttack, myAttack, meow);
 
-        console.log(myBall);
-
+        if(!(myStrike||myBall)) {
+            myOut++;
+            outLight(myOut);
+            alert(`${outArr[myOut-1]}아웃!`);
+        }
 
         console.log(myAttack);
         // tscore=numberChecker(comAttack, myAttack, meow, tscore);
 
-        scoreBoard(tscore);
+        ballLight(myBall);
+        strikeLight(myStrike);
+
+
         gameBoard(play, myAttack, myBall, myStrike, myOut);
+        dashAttack(myAttack);
 
         for(let i=0;i<meow;i++) {
             document.querySelector(`.num_${i+1}`).value='';
         }
 
-        if(!(myStrike||myBall)) {
-            alert('아웃!');
-            myOut++;
-        }
+
 
         if(myOut==3) {
             alert('게임이 종료되었습니다!');
+            tscore=0;
         }
+
+        else if(myStrike==meow) {
+            alert(`축하합니다. 게임이 종료 되었습니다. 
+            시도 횟수: ${play} 점수: ${tscore}`);
+        }
+
+        scoreBoard(tscore);
+
     })
 
     retire.addEventListener('click', function() {

@@ -14,7 +14,6 @@ function numberMaker(len){
                 i--;
                 break;
             }
-
         }
     }
     return numArr;

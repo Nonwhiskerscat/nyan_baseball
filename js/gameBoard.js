@@ -1,21 +1,31 @@
 function gameBoard(cat, kitty, kidcat1, kidcat2, kidcat3) {
 
-    const plusdata=document.querySelector('.part4 .result_t tr');
+    const nyan=document.querySelector('.part4 tbody');
 
     const kidcat0 = kitty.join('');
 
-    let contents='';
-    contents+=
-    `
-    <tr>
-    <td>${cat}</td>
-    <td>${kidcat0}</td>
-    <td>${kidcat1}</td>
-    <td>${kidcat2}</td>
-    <td>${kidcat3}</td>
-    </tr>
-    `
 
-    plusdata.append(contents);
+    rowNyan = document.createElement('TR');
+    nyan.appendChild(rowNyan);
+
+    cellNyan = document.createElement('TD');
+    cellNyan.innerHTML = cat;
+    rowNyan.appendChild(cellNyan);
+
+    cellNyan = document.createElement('TD');
+    cellNyan.innerHTML = kidcat0;
+    rowNyan.appendChild(cellNyan);
+
+    cellNyan = document.createElement('TD');
+    cellNyan.innerHTML = kidcat1;
+    rowNyan.appendChild(cellNyan);
+
+    cellNyan = document.createElement('TD');
+    cellNyan.innerHTML = kidcat2;
+    rowNyan.appendChild(cellNyan);
+
+    cellNyan = document.createElement('TD');
+    cellNyan.innerHTML = kidcat3;
+    rowNyan.appendChild(cellNyan);
     
 }

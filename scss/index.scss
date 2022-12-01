@@ -383,6 +383,8 @@ body {
         
                 @include responsive(pc-cat) {
         
+                    //
+
                 }
 
                 div {
@@ -471,9 +473,27 @@ body {
                                 height: 20px;
                             }
 
+                            &.oball {
+                                background-color: $ball;
+                                opacity: 0.7;
+                            }
+
+                            &.ostrike {
+                                background-color: $strike;
+                                opacity: 0.6;
+                            }
+
+                            &.sout {
+                                background-color: $out;
+                                opacity: 0.6;
+                            }
+
+
+
                             &:last-child {
                                 margin-right: 0;
                             }
+
                         }
                     }
 
@@ -548,6 +568,16 @@ body {
                     text-align: center;
 
                     tr {
+                        margin-top: $small_margin_m;
+
+                        @include responsive(semi-cat) {
+                            margin-top: $small_margin_s;
+                        }
+
+                        @include responsive(pc-cat) {
+                            margin-top: $small_margin_p;
+                        }
+
                         th {
 
                             width: 15%;
@@ -570,17 +600,15 @@ body {
                         }
 
                         td {
-                            margin-top: $tiny_margin_m;
+                            font-weight: 400;
                             font-size: calc(12px + 0.5vw);
 
                             @include responsive(semi-cat) {
-                                margin-top: $tiny_margin_s;
-                                font-size: calc(12px + 0.5vw);
+                                font-size: calc(14px + 0.5vw);
                             }
 
                             @include responsive(pc-cat) {
-                                margin-top: $tiny_margin_p;
-                                font-size: 16px;
+                                font-size: 18px;
                             }
                         }
 

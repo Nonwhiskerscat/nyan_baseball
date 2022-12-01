@@ -5,10 +5,16 @@
 
     
         let bcircle='';
+        let scircle='';
+
         for(let i=0;i<cat;i++) {
-            bcircle+=`<li class="circle"></li>`
+            bcircle+=`<li class="circle" id="bcircle_${i+1}"></li>`
         }
-        
+
+        for(let i=0;i<cat-1;i++) {
+            scircle+=`<li class="circle" id="scircle_${i+1}"></li>`
+        }
+
         nyan.innerHTML=bcircle;
-        meow.innerHTML=bcircle;
+        meow.innerHTML=scircle;
     }
