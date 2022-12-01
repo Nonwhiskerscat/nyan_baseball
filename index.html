@@ -8,6 +8,7 @@
     <meta name="Author" content="Seoyong Kim">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/webfont.css">
+    <link rel="stylesheet" href="./css/scroll.css">
     <link rel="stylesheet" href="./css/index.css">
     <script src="./js/inputMaker.js"></script>
     <script src="./js/startCheck.js"></script>
@@ -21,6 +22,15 @@
     <script src="./js/randomValue.js"></script>
     <script src="./js/totalScore.js"></script>
     <script src="./js/systemScore.js"></script>
+    <script src="./js/countMaker.js"></script>
+    <script src="./js/scoreBoard.js"></script>
+    <script src="./js/strikeScore.js"></script>
+    <script src="./js/countScore.js"></script>
+    <script src="./js/storeScore"></script>
+    <script src="./js/outScore.js"></script>
+    <script src="./js/ballCount.js"></script>
+    <script src="./js/strikeCount.js"></script>
+    <script src="./js/outCount.js"></script>
     <title>숫자야구게임</title>
 </head>
 <body>
@@ -95,31 +105,24 @@
 
                             <div>
                                 <h3>Out</h3>
-                                <ul class="strike_count">
+                                <ul class="out_count">
                                     <li class="circle"></li>
                                     <li class="circle"></li>
                                     <li class="circle"></li>
-
                                 </ul>
                             </div>
 
                             <div>
                                 <h3>Ball</h3>
                                 <ul class="ball_count">
-                                    <li class="circle"></li>
-                                    <li class="circle"></li>
-                                    <li class="circle"></li>
-                                    <li class="circle"></li>
+
                                 </ul>
                             </div>
 
                             <div>
                                 <h3>Strike</h3>
                                 <ul class="strike_count">
-                                    <li class="circle"></li>
-                                    <li class="circle"></li>
-                                    <li class="circle"></li>
-                                    <li class="circle"></li>
+
                                 </ul>
                             </div>
 
@@ -149,29 +152,14 @@
                                     <th scope="col">OUT</th>                            
                                 </tr>
     
-                                <tr>
-                                    <td>1</td>
-                                    <td>222222</td>
-                                    <td>3</td>
-                                    <td>2</td>
-                                    <td>1</td>
-                                </tr>
+                                <!-- <tr>
+                                    <td>횟수</td>
+                                    <td>입력된 수</td>
+                                    <td>Ball</td>
+                                    <td>Strike</td>
+                                    <td>Out</td>
+                                </tr> -->
 
-                                <tr>
-                                    <td>2</td>
-                                    <td>222222</td>
-                                    <td>3</td>
-                                    <td>2</td>
-                                    <td>1</td>
-                                </tr>
-
-                                <tr>
-                                    <td>33</td>
-                                    <td>222222</td>
-                                    <td>3</td>
-                                    <td>2</td>
-                                    <td>1</td>
-                                </tr>
                             </table>
                         </div>
                     </div> <!--part4-->
@@ -217,9 +205,8 @@
 
                 <div class="part7">
                     <div class="sc_board">
-                        <p>score</p>
+                        <h5>score</h5>
                         <div class="score">
-                            <!--이곳에는 게임 점수가 들어갑니다.-->
                         </div>
                     </div>
                 </div><!--part7-->
