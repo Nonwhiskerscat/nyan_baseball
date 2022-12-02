@@ -1,4 +1,4 @@
-function strikeScore(cat, neko) {
+function strikeScore(cat) {
     let score=0;
 
     switch(cat) {
@@ -17,8 +17,6 @@ function strikeScore(cat, neko) {
         default: score=80;
         
     }
-
-    neko+=score;
     
-    return neko;
+    return score;
 }

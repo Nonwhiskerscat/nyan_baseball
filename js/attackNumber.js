@@ -7,5 +7,6 @@ function attackNumber(cat) {
         let meow = Number(nyan.querySelector(`.num_${i+1}`).value);
         attack.push(meow);
     }
+    
     return attack;
 }

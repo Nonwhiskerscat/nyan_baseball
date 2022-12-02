@@ -52,6 +52,8 @@ window.addEventListener('load', function() {
             myOut++;
             outLight(myOut);
             alert(`${outArr[myOut-1]}아웃!`);
+            tscore=outScore(tscore);
+
         }
 
         console.log(myAttack);
@@ -80,6 +82,7 @@ window.addEventListener('load', function() {
             시도 횟수: ${play} 점수: ${tscore}`);
         }
 
+        tscore=scoreCalculator(tscore, meow, myStrike);
         scoreBoard(tscore);
 
     })

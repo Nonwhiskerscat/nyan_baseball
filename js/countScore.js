@@ -1,4 +1,4 @@
-function countScore(cat, neko) {
+function countScore(cat) {
     let score=0;
     switch(cat) {
         case 2:
@@ -29,8 +29,7 @@ function countScore(cat, neko) {
         
     }
 
-    neko-=score;
     
-    return neko;
+    return score;
 }
 
