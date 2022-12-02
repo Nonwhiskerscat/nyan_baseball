@@ -235,6 +235,58 @@ body {
             font-family: $highlight;
             color: white;
             text-align: center;
+
+            @include responsive(semi-cat) {
+                font-size: calc(28px + 2vw);
+            }
+
+            @include responsive(pc-cat) {
+                font-size: 40px;
+            }
+        }
+
+        h6 {
+            font-size: calc(12px + 0.5vw);
+            font-family: $common_font;
+            text-align: center;
+            margin-top: $small_margin_m;
+
+            @include responsive(semi-cat) {
+                font-size: calc(12px + 0.5vw);
+                margin-top: $small_margin_s;
+            }
+
+            @include responsive(pc-cat) {
+                font-size: 20px;
+                margin-top: $small_margin_p;
+            }
+
+            span {
+                font-size: calc(14px + 0.5vw);
+                font-family: $highlight;
+                color: $accent;
+                margin-bottom: $tiny_margin_m;
+                display: block;
+
+                @include responsive(semi-cat) {
+                    margin-top: $tiny_margin_s;
+                }
+    
+                @include responsive(pc-cat) {
+                    font-size: 20px;
+                    margin-top: $tiny_margin_p;
+                }
+            }
+
+            br {
+                @include responsive(semi-cat) {
+                    display: none;
+                }
+    
+                @include responsive(pc-cat) {
+                    //
+                }
+            }
         }
     
         .third_flex {
@@ -310,8 +362,7 @@ body {
     
             }
     
-            .btn {
-    
+            .btn, .ctn {
                 button {
                     display: block;
                     background-color: transparent;
@@ -321,12 +372,13 @@ body {
                     height: calc(20px + 5vw);
                     border-radius: 10px;
                     font-family: $highlight;
-                    font-size: calc(20px + 1vw);
+                    font-size: calc(18px + 0.5vw);
     
                     @include responsive(semi-cat) {
                         border: 4px solid rgba($color: #ffffff, $alpha: 1);
                         width: calc(40px + 5vw);
-                        height: calc(30px + 5vw);
+                        height: calc(25px + 5vw);
+                        font-size: calc(20px + 1vw);
                         border-radius: 15px;
                 
                     }
@@ -336,6 +388,7 @@ body {
                         height: 100px;
                         border: 5px solid rgba($color: #ffffff, $alpha: 1);
                         border-radius: 20px;
+                        font-size: 36px;
     
         
                     }
@@ -421,17 +474,17 @@ body {
                     p {
                         font-family: $common_light;
                         font-size: calc(18px + 1vw);
-                        margin-top: calc($small_margin_m/2);
+                        margin-top: $tiny_margin_m;
                         letter-spacing: 2px;
 
                         @include responsive(semi-cat) {
                             font-size: calc(24px + 1vw);
-                            margin-top: calc($small_margin_s/2);
+                            margin-top: $tiny_margin_s;
                         }
 
                         @include responsive(pc-cat) {
                             font-size: 30px;
-                            margin-top: calc($small_margin_p/2);
+                            margin-top: $tiny_margin_p;
                         }
                     }
 
@@ -543,14 +596,11 @@ body {
 
             .result_box {
                 background-color: rgba($color: #000000, $alpha: 0.6);
-                padding: 10px;
                 height: calc(180px + 5vw);
                 margin-top: $small_margin_m;
-                overflow-y: scroll;
+                padding: 10px 0;
 
-                &::-webkit-scrollbar {
-                    display: none;
-                }
+
 
                 @include responsive(semi-cat) {
                     margin-top: $small_margin_s;
@@ -566,6 +616,7 @@ body {
                 table {
                     width: 100%;
                     text-align: center;
+                    padding: 10px 0;
 
                     tr {
                         margin-top: $small_margin_m;
