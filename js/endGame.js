@@ -1,6 +1,8 @@
 function endGame(escore, eout, estrike, meow) {
 
     const nyan = document.querySelectorAll('#catnum');
+    const kidcat1=document.querySelector('.btn');
+    const kidcat2=document.querySelector('.ctn');
     let score=escore;
 
 
@@ -15,6 +17,8 @@ function endGame(escore, eout, estrike, meow) {
 
         [].forEach.call(nyan,function(nyan){
             nyan.classList.add('written');
+            kidcat1.classList.add('no');
+            kidcat2.classList.remove('no')
             nyan.disabled=true;
         }); 
 
