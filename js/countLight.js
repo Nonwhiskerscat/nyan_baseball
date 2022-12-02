@@ -4,9 +4,11 @@ function ballLight(cat) {
     }
 }
 
-function strikeLight(cat) {
-    for(let i=1;i<=cat;i++) {
-        document.getElementById(`scircle_${i}`).classList.add('ostrike');
+function strikeLight(meow, cat) {
+    if(meow!=cat) {
+        for(let i=1;i<=cat;i++) {
+            document.getElementById(`scircle_${i}`).classList.add('ostrike');
+        }
     }
 }
 

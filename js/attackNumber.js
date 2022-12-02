@@ -1,7 +1,6 @@
 function attackNumber(cat) {
 
     const nyan = document.querySelector('.kitty');
-    const nyans= document.querySelectorAll('.kitty #catnum');
 
     let attack=[];
     for(let i=0;i<cat;i++) {

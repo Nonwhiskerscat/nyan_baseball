@@ -60,7 +60,7 @@ window.addEventListener('load', function() {
         // tscore=numberChecker(comAttack, myAttack, meow, tscore);
 
         ballLight(myBall);
-        strikeLight(myStrike);
+        strikeLight(meow,myStrike);
 
 
         gameBoard(play, myAttack, myBall, myStrike, myOut);
@@ -72,17 +72,18 @@ window.addEventListener('load', function() {
 
 
 
-        if(myOut==3) {
-            alert('게임이 종료되었습니다!');
-            tscore=0;
-        }
+        // if(myOut==3) {
+        //     alert('게임이 종료되었습니다!');
+        //     tscore=0;
+        // }
 
-        else if(myStrike==meow) {
-            alert(`축하합니다. 게임이 종료 되었습니다. 
-            시도 횟수: ${play} 점수: ${tscore}`);
-        }
+        // else if(myStrike==meow) {
+        //     alert(`축하합니다. 게임이 종료 되었습니다. 
+        //     시도 횟수: ${play} 점수: ${tscore}`);
+        // }
 
         tscore=scoreCalculator(tscore, meow, myStrike);
+        tscore=endGame(tscore, myOut, myStrike, meow);
         scoreBoard(tscore);
 
     })
