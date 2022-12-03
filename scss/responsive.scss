@@ -7,6 +7,12 @@
         }
     }
 
+    @if $break == six-cat {
+        @media screen and (min-width: $break-600) {
+            @content;
+        }
+    }
+
     @else if $break == semi-cat { //중단점 770px
         @media screen and (min-width:$break-semiscreen) {
             @content;
