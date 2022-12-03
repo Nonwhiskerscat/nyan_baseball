@@ -7,7 +7,7 @@ function endGame(escore, eout, estrike, meow, earr) {
     let kidcat3=[...earr]
 
 
-    if(escore<0||eout==3||estrike==meow) {
+    if(escore<=0||eout==3||estrike==meow) {
         if(estrike==meow) {
             score=escore+countScore(meow);
         }

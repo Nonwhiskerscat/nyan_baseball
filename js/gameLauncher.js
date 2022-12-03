@@ -48,7 +48,7 @@ window.addEventListener('load', function() {
         let myStrike=strikeCount(comAttack, myAttack, meow);
         let myBall=ballCount(comAttack, myAttack, meow);
 
-        if(!(myStrike||myBall)) {
+        if(outCount(myStrike, myBall)) {
             myOut++;
             outLight(myOut);
             alert(`${outArr[myOut-1]}아웃!`);
@@ -66,25 +66,9 @@ window.addEventListener('load', function() {
         gameBoard(play, myAttack, myBall, myStrike, myOut);
         dashAttack(myAttack);
 
-
-        // if(myOut==3) {
-        //     alert('게임이 종료되었습니다!');
-        //     tscore=0;
-        // }
-
-        // else if(myStrike==meow) {
-        //     alert(`축하합니다. 게임이 종료 되었습니다. 
-        //     시도 횟수: ${play} 점수: ${tscore}`);
-        // }
-
         tscore=scoreCalculator(tscore, meow, myStrike);
         tscore=endGame(tscore, myOut, myStrike, meow, comAttack);
         scoreBoard(tscore);
-
-        
-        // for(let i=0;i<meow;i++) {
-        //     document.querySelector(`.num_${i+1}`).value='';
-        // }
 
     })
 
