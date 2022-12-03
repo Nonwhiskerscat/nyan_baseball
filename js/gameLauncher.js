@@ -53,7 +53,6 @@ window.addEventListener('load', function() {
             outLight(myOut);
             alert(`${outArr[myOut-1]}아웃!`);
             tscore=outScore(tscore);
-
         }
 
         console.log(myAttack);
