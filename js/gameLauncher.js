@@ -66,11 +66,6 @@ window.addEventListener('load', function() {
         gameBoard(play, myAttack, myBall, myStrike, myOut);
         dashAttack(myAttack);
 
-        for(let i=0;i<meow;i++) {
-            document.querySelector(`.num_${i+1}`).value='';
-        }
-
-
 
         // if(myOut==3) {
         //     alert('게임이 종료되었습니다!');
@@ -83,8 +78,13 @@ window.addEventListener('load', function() {
         // }
 
         tscore=scoreCalculator(tscore, meow, myStrike);
-        tscore=endGame(tscore, myOut, myStrike, meow);
+        tscore=endGame(tscore, myOut, myStrike, meow, comAttack);
         scoreBoard(tscore);
+
+        
+        // for(let i=0;i<meow;i++) {
+        //     document.querySelector(`.num_${i+1}`).value='';
+        // }
 
     })
 

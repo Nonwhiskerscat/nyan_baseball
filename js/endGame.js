@@ -1,17 +1,21 @@
-function endGame(escore, eout, estrike, meow) {
+function endGame(escore, eout, estrike, meow, earr) {
 
     const nyan = document.querySelectorAll('#catnum');
     const kidcat1=document.querySelector('.btn');
     const kidcat2=document.querySelector('.ctn');
     let score=escore;
+    let kidcat3=[...earr]
 
 
     if(escore<0||eout==3||estrike==meow) {
         if(estrike==meow) {
-            escore+=countScore(meow);
+            score=escore+countScore(meow);
         }
 
         else {
+            for(let i=0;i<meow;i++) {
+                document.querySelector(`.num_${i+1}`).value=kidcat3[i];
+            }
             score=0;
         }
 
@@ -22,8 +26,18 @@ function endGame(escore, eout, estrike, meow) {
             nyan.disabled=true;
         }); 
 
+        return score;
+
     }
 
-    return score;
+    else {
+        for(let i=0;i<meow;i++) {
+            document.querySelector(`.num_${i+1}`).value='';
+        }
+    
+        return score;
+    
+    }
+
 
 }
