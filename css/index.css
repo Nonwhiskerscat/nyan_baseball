@@ -30,7 +30,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/part1/phone_back.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/part1/phone_back.png);
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,7 +38,7 @@
 
 @media screen and (min-width: 900px) {
   .bighead {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/part1/semi_back.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/part1/semi_back.png);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -46,7 +46,7 @@
 
 @media screen and (min-width: 1400px) {
   .bighead {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/part1/background.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/part1/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -126,14 +126,21 @@ body {
   position: relative;
 }
 
-.hidden_alert {
+.no_scroll {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+}
+
+#result_alt {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  z-index: 2;
 }
 
-.hidden_alert .alertbx {
+#result_alt .alertbx {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -147,64 +154,72 @@ body {
 }
 
 @media screen and (min-width: 900px) {
-  .hidden_alert .alertbx {
+  #result_alt .alertbx {
     width: 40%;
     min-width: 400px;
   }
 }
 
 @media screen and (min-width: 1400px) {
-  .hidden_alert .alertbx {
+  #result_alt .alertbx {
     width: 480px;
   }
 }
 
-.hidden_alert .alertbx h4 {
-  font-size: calc(32px + 1vw);
+#result_alt .alertbx h4 {
+  font-size: calc(28px + 0.5vw);
   color: #ffe92d;
 }
 
 @media screen and (min-width: 900px) {
-  .hidden_alert .alertbx h4 {
-    font-size: calc(36px + 1vw);
+  #result_alt .alertbx h4 {
+    font-size: calc(28px + 0.5vw);
   }
 }
 
 @media screen and (min-width: 1400px) {
-  .hidden_alert .alertbx h4 {
+  #result_alt .alertbx h4 {
     font-size: 48px;
   }
 }
 
-.hidden_alert .alertbx img {
+#result_alt .alertbx img {
   width: calc(50px + 5vw);
 }
 
 @media screen and (min-width: 900px) {
-  .hidden_alert .alertbx img {
+  #result_alt .alertbx img {
     width: calc(60px + 5vw);
   }
 }
 
 @media screen and (min-width: 1400px) {
-  .hidden_alert .alertbx img {
+  #result_alt .alertbx img {
     width: 120px;
   }
 }
 
-.hidden_alert .alertbx p.notice {
+#result_alt .alertbx p.notice {
   font-family: "Yeongdo-Rg";
   font-size: calc(18px + 0.5vw);
   line-height: 1.5em;
+  margin-top: 15px;
 }
 
-@media screen and (min-width: 1400px) {
-  .hidden_alert .alertbx p.notice {
-    font-size: 21px;
+@media screen and (min-width: 900px) {
+  #result_alt .alertbx p.notice {
+    margin-top: 18px;
   }
 }
 
-.hidden_alert .alertbx .scorebox {
+@media screen and (min-width: 1400px) {
+  #result_alt .alertbx p.notice {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+}
+
+#result_alt .alertbx .scorebox {
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
@@ -214,32 +229,72 @@ body {
 }
 
 @media screen and (min-width: 900px) {
-  .hidden_alert .alertbx .scorebox {
+  #result_alt .alertbx .scorebox {
     width: 80%;
   }
 }
 
 @media screen and (min-width: 1400px) {
-  .hidden_alert .alertbx .scorebox {
+  #result_alt .alertbx .scorebox {
     width: 80%;
   }
 }
 
-.hidden_alert .alertbx .scorebox > div h5 {
+#result_alt .alertbx .scorebox > div h5 {
   color: #ffe92d;
   font-size: calc(21px + 0.5vw);
 }
 
 @media screen and (min-width: 900px) {
-  .hidden_alert .alertbx .scorebox > div h5 {
+  #result_alt .alertbx .scorebox > div h5 {
     font-size: calc(21px + 0.5vw);
   }
 }
 
 @media screen and (min-width: 1400px) {
-  .hidden_alert .alertbx .scorebox > div h5 {
+  #result_alt .alertbx .scorebox > div h5 {
     font-size: 28px;
   }
+}
+
+#result_alt .alertbx .scorebox > div p {
+  font-size: calc(18px + 0.5vw);
+}
+
+@media screen and (min-width: 900px) {
+  #result_alt .alertbx .scorebox > div p {
+    font-size: calc(18px + 0.5vw);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #result_alt .alertbx .scorebox > div p {
+    font-size: 21px;
+  }
+}
+
+#result_alt .alertbx .cls h6 {
+  cursor: pointer;
+  font-size: calc(28px + 0.5vw);
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 900px) {
+  #result_alt .alertbx .cls h6 {
+    font-size: calc(32px + 0.5vw);
+    margin-top: 18px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #result_alt .alertbx .cls h6 {
+    font-size: 36px;
+    margin-top: 20px;
+  }
+}
+
+#result_alt .alertbx .cls h6:hover {
+  transform: rotateZ(5deg);
 }
 
 .first_screen h1 {
@@ -416,6 +471,10 @@ body {
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+
+.first_screen .part1 .first_btn .btn1_flex:hover p {
+  transform: rotateZ(5deg);
 }
 
 .first_screen .part1 .first_btn .btn1_flex img {

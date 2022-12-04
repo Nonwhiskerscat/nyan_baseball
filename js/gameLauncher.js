@@ -76,7 +76,7 @@ window.addEventListener('load', function() {
         dashAttack(myAttack);
 
         tscore=scoreCalculator(tscore, meow, myStrike);
-        tscore=endGame(tscore, myOut, myStrike, meow, comAttack);
+        tscore=endGame(tscore, myOut, myStrike, meow, comAttack, play);
         scoreBoard(tscore);
 
     })

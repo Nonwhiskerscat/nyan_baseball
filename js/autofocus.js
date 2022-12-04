@@ -9,7 +9,7 @@ function nextFocus(cat) {
         for(let i=1;i<cat;i++) {
             if(nyan.querySelector(`.num_${i}`).value.length==1) {
                 nyan.querySelector(`.num_${i+1}`).focus();
-            }
+            } 
         }
 
     })
