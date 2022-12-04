@@ -93,6 +93,22 @@ body {
                 width: 80%;
 
             }
+
+            &>div {
+                h5 {
+                    color: $accent;
+                    font-size: calc(21px + 0.5vw);
+
+                    @include responsive(semi-cat) {
+                        font-size: calc(21px + 0.5vw);
+                    }
+
+                    @include responsive(pc-cat) {
+                        font-size: 28px;
+                    }
+
+                }
+            }
         }
 
 

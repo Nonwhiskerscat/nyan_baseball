@@ -225,6 +225,23 @@ body {
   }
 }
 
+.hidden_alert .alertbx .scorebox > div h5 {
+  color: #ffe92d;
+  font-size: calc(21px + 0.5vw);
+}
+
+@media screen and (min-width: 900px) {
+  .hidden_alert .alertbx .scorebox > div h5 {
+    font-size: calc(21px + 0.5vw);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .hidden_alert .alertbx .scorebox > div h5 {
+    font-size: 28px;
+  }
+}
+
 .first_screen h1 {
   text-align: center;
   font-size: calc(28px + 3vw);
