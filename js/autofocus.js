@@ -11,5 +11,6 @@ function nextFocus(cat) {
                 nyan.querySelector(`.num_${i+1}`).focus();
             }
         }
+
     })
 }

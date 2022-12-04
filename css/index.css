@@ -127,6 +127,13 @@ body {
 }
 
 .hidden_alert {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.hidden_alert .alertbx {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -134,11 +141,87 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   text-align: center;
   z-index: 2;
+  padding: 30px 0;
+  width: 80%;
+  max-width: 400px;
+}
+
+@media screen and (min-width: 900px) {
+  .hidden_alert .alertbx {
+    width: 40%;
+    min-width: 400px;
+  }
 }
 
 @media screen and (min-width: 1400px) {
-  .hidden_alert {
+  .hidden_alert .alertbx {
     width: 480px;
+  }
+}
+
+.hidden_alert .alertbx h4 {
+  font-size: calc(32px + 1vw);
+  color: #ffe92d;
+}
+
+@media screen and (min-width: 900px) {
+  .hidden_alert .alertbx h4 {
+    font-size: calc(36px + 1vw);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .hidden_alert .alertbx h4 {
+    font-size: 48px;
+  }
+}
+
+.hidden_alert .alertbx img {
+  width: calc(50px + 5vw);
+}
+
+@media screen and (min-width: 900px) {
+  .hidden_alert .alertbx img {
+    width: calc(60px + 5vw);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .hidden_alert .alertbx img {
+    width: 120px;
+  }
+}
+
+.hidden_alert .alertbx p.notice {
+  font-family: "Yeongdo-Rg";
+  font-size: calc(18px + 0.5vw);
+  line-height: 1.5em;
+}
+
+@media screen and (min-width: 1400px) {
+  .hidden_alert .alertbx p.notice {
+    font-size: 21px;
+  }
+}
+
+.hidden_alert .alertbx .scorebox {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 400px;
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 900px) {
+  .hidden_alert .alertbx .scorebox {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .hidden_alert .alertbx .scorebox {
+    width: 80%;
   }
 }
 
