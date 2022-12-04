@@ -29,6 +29,7 @@ window.addEventListener('load', function() {
 
     [].forEach.call(start,function(start){
         start.addEventListener('click', function() {
+            alertCommon(1);
             meow=Number(this.value);
             if(!meow) {
                 meow=randomValue();
@@ -44,6 +45,7 @@ window.addEventListener('load', function() {
             countMaker(meow);
             firstFocus();
             nextFocus(meow);
+            inputEnter();
         })
     }); 
 
@@ -61,7 +63,9 @@ window.addEventListener('load', function() {
         if(outCount(myStrike, myBall)) {
             myOut++;
             outLight(myOut);
-            alert(`${outArr[myOut-1]}아웃!`);
+            if(myOut<3) {
+                alertCommon(2, myStrike, myOut);
+            }
             tscore=outScore(tscore);
         }
 
@@ -100,19 +104,12 @@ window.addEventListener('load', function() {
 
     
     retire.addEventListener('click', function() {
-        const giveup=confirm('정말 포기하시겠습니까?');
-        if(giveup) {
-            alert('게임이 끝났습니다.');
-            location.reload();
-        }
+        tscore=confirmCommon(1,tscore);
+        scoreBoard(tscore);
     })
 
     again.addEventListener('click', function() {
-        const again=confirm('다시 시작하시겠습니까?');
-        if(again) {
-            alert('게임을 다시 시작합니다.');
-            location.reload();
-        }
+        confirmCommon(2);
     })
 
     

@@ -14,6 +14,7 @@ function alertResult(cat, escore, earr, etry) {
     const com=earr;
     const trial=etry;
 
+
     rst$.classList.remove('no');
     document.body.classList.add('no_scroll');
     document.querySelector('.container').style.touchAction='none';
@@ -57,6 +58,55 @@ function alertResult(cat, escore, earr, etry) {
 
 
     
+
+
+}
+
+function alertCommon(cat, meow, nyan) {
+    const rst$=document.getElementById('common_alt');
+    const rstH4=rst$.querySelector('.alertbx h4');
+    const rstImg=rst$.querySelector('.alertbx img')
+    const rstNtc=rst$.querySelector('.alertbx .notice');
+    const rstCls=rst$.querySelector('.cls h6')
+
+    const lolly=cat;
+    const myStrike=meow;
+    const strArr=['두', '세', '네', '다섯', '여섯', '일곱'];
+    const myOut=nyan;
+    const outArr=['One', 'Two'];
+
+    rst$.classList.remove('no');
+    document.body.classList.add('no_scroll');
+    document.querySelector('.container').style.touchAction='none';
+    
+    
+
+
+    if(lolly==1) {
+        rstH4.innerHTML='Game Start!';
+        rstImg.src='../img/alert/cat.png';
+        rstNtc.innerHTML=`게임을 시작합니다.`;
+    }
+
+    if(lolly==2) {
+        rstH4.innerHTML=`${outArr[myOut-1]} Out`;
+        rstImg.src='../img/alert/catout.png';
+        rstNtc.innerHTML=`일치하는 숫자가 없어 <br>아웃을 당하셨습니다.`;
+    }
+
+    if(lolly==3) {
+        rstH4.innerHTML=`${myStrike} Strike`;
+        rstImg.src='../img/alert/cathappy.png';
+        rstNtc.innerHTML=`${strArr[myStrike-2]} 개의 스트를 잡았습니다.! <br> 마지막까지 파이팅!`;
+
+    }
+
+    rstCls.addEventListener('click', function() {
+        rst$.classList.add('no');
+        document.body.classList.remove('no_scroll');
+        document.querySelector('.container').style.touchAction='auto';
+
+    });
 
 
 }

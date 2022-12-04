@@ -34,42 +34,73 @@
     <script src="./js/scoreCalculator.js"></script>
     <script src="./js/endGame.js"></script>
     <script src="./js/keyPress.js"></script>
-    <script src="./js/mobileInput.js"></script>
     <script src="./js/alertCustom.js"></script>
+    <script src="./js/confirmCustom.js"></script>
+    <script src="./js/scoreReset.js"></script>
     <title>숫자야구게임</title>
 </head>
 <body>
     <div class="bighead">
-        <div id="result_alt" class="no">
-            <div class="alertbx">
-                <h4><!--여기에는 게임 결과 타이틀이 들어갑니다.--></h4>
-                <img src="#" alt="#">
-                <p class="notice"><!--여기에는 게임 결과 안내문이 들어갑니다.--></p>
-                
-                <div class="scorebox">
 
-                    <div class="tr">
-                        <h5>Result</h5>
-                        <p><!--여기에는 결과값이 들어갑니다.--></p>
+        <div class="alerts">
+            <div id="result_alt" class="no">
+                <div class="alertbx">
+                    <h4><!--여기에는 게임 결과 타이틀이 들어갑니다.--></h4>
+                    <img src="#" alt="#">
+                    <p class="notice"><!--여기에는 게임 결과 안내문이 들어갑니다.--></p>
+                    
+                    <div class="scorebox">
+    
+                        <div class="tr">
+                            <h5>Result</h5>
+                            <p><!--여기에는 결과값이 들어갑니다.--></p>
+                        </div>
+    
+                        <div class="tt">
+                            <h5>Trial</h5>
+                            <p><!--여기에는 시도 횟수가 들어갑니다.--></p>
+                        </div>
+    
+                        <div class="ts">
+                            <h5>Score</h5>
+                            <p><!--여기에는 스코어가 들어갑니다.--></p>
+                        </div>
+    
                     </div>
-
-                    <div class="tt">
-                        <h5>Trial</h5>
-                        <p><!--여기에는 시도 횟수가 들어갑니다.--></p>
+    
+                    <div class="cls">
+                        <h6>Close!</h6>
                     </div>
-
-                    <div class="ts">
-                        <h5>Score</h5>
-                        <p><!--여기에는 스코어가 들어갑니다.--></p>
+                </div>          
+            </div>
+    
+            <div id="common_alt" class="no">
+                <div class="alertbx">
+                    <h4><!--여기에는 타이틀이 들어갑니다.--></h4>
+                    <img src="./img/alert/catcommon.png" alt="#">
+                    <p class="notice"><!--여기에는 안내문 1이 들어갑니다.--></p>
+                    <div class="cls">
+                        <h6>Close!</h6>
                     </div>
-
-                </div>
-
-                <div class="cls">
-                    <h6>close</h6>
-                </div>
-            </div>          
+                </div>          
+            </div>
         </div>
+
+        <div class="confirms">
+            <div id="common_con" class="no">
+                <div class="contbx">
+                    <h4><!--여기에는 타이틀이 들어갑니다.--></h4>
+                    <img src="./img/alert/catcommon.png" alt="#">
+                    <p class="notice1"><!--여기에는 안내문이 들어갑니다.--></p>
+                    <p class="notice2"><!--여기에는 안내문 2가 들어갑니다.--></p>
+                    <div class="con_btn">
+                        <h6 class="yes">Yes!</h6>
+                        <h6 class="nope">Nope!</h6>
+                    </div>
+                </div>          
+            </div>
+        </div>
+
 
         <div class="container">
             <div class="first_screen">

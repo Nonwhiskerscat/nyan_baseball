@@ -132,7 +132,7 @@ body {
   overflow: hidden;
 }
 
-#result_alt {
+.alerts > div {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -140,7 +140,7 @@ body {
   z-index: 2;
 }
 
-#result_alt .alertbx {
+.alerts > div .alertbx {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -154,52 +154,52 @@ body {
 }
 
 @media screen and (min-width: 900px) {
-  #result_alt .alertbx {
+  .alerts > div .alertbx {
     width: 40%;
     min-width: 400px;
   }
 }
 
 @media screen and (min-width: 1400px) {
-  #result_alt .alertbx {
+  .alerts > div .alertbx {
     width: 480px;
   }
 }
 
-#result_alt .alertbx h4 {
+.alerts > div .alertbx h4 {
   font-size: calc(28px + 0.5vw);
   color: #ffe92d;
 }
 
 @media screen and (min-width: 900px) {
-  #result_alt .alertbx h4 {
+  .alerts > div .alertbx h4 {
     font-size: calc(28px + 0.5vw);
   }
 }
 
 @media screen and (min-width: 1400px) {
-  #result_alt .alertbx h4 {
+  .alerts > div .alertbx h4 {
     font-size: 48px;
   }
 }
 
-#result_alt .alertbx img {
+.alerts > div .alertbx img {
   width: calc(50px + 5vw);
 }
 
 @media screen and (min-width: 900px) {
-  #result_alt .alertbx img {
+  .alerts > div .alertbx img {
     width: calc(60px + 5vw);
   }
 }
 
 @media screen and (min-width: 1400px) {
-  #result_alt .alertbx img {
+  .alerts > div .alertbx img {
     width: 120px;
   }
 }
 
-#result_alt .alertbx p.notice {
+.alerts > div .alertbx p.notice {
   font-family: "Yeongdo-Rg";
   font-size: calc(18px + 0.5vw);
   line-height: 1.5em;
@@ -207,19 +207,19 @@ body {
 }
 
 @media screen and (min-width: 900px) {
-  #result_alt .alertbx p.notice {
+  .alerts > div .alertbx p.notice {
     margin-top: 18px;
   }
 }
 
 @media screen and (min-width: 1400px) {
-  #result_alt .alertbx p.notice {
+  .alerts > div .alertbx p.notice {
     font-size: 24px;
     margin-top: 20px;
   }
 }
 
-#result_alt .alertbx .scorebox {
+.alerts > div .alertbx .scorebox {
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
@@ -229,71 +229,223 @@ body {
 }
 
 @media screen and (min-width: 900px) {
-  #result_alt .alertbx .scorebox {
+  .alerts > div .alertbx .scorebox {
     width: 80%;
   }
 }
 
 @media screen and (min-width: 1400px) {
-  #result_alt .alertbx .scorebox {
+  .alerts > div .alertbx .scorebox {
     width: 80%;
   }
 }
 
-#result_alt .alertbx .scorebox > div h5 {
+.alerts > div .alertbx .scorebox > div h5 {
   color: #ffe92d;
   font-size: calc(21px + 0.5vw);
 }
 
 @media screen and (min-width: 900px) {
-  #result_alt .alertbx .scorebox > div h5 {
+  .alerts > div .alertbx .scorebox > div h5 {
     font-size: calc(21px + 0.5vw);
   }
 }
 
 @media screen and (min-width: 1400px) {
-  #result_alt .alertbx .scorebox > div h5 {
+  .alerts > div .alertbx .scorebox > div h5 {
     font-size: 28px;
   }
 }
 
-#result_alt .alertbx .scorebox > div p {
+.alerts > div .alertbx .scorebox > div p {
   font-size: calc(18px + 0.5vw);
 }
 
 @media screen and (min-width: 900px) {
-  #result_alt .alertbx .scorebox > div p {
+  .alerts > div .alertbx .scorebox > div p {
     font-size: calc(18px + 0.5vw);
   }
 }
 
 @media screen and (min-width: 1400px) {
-  #result_alt .alertbx .scorebox > div p {
+  .alerts > div .alertbx .scorebox > div p {
     font-size: 21px;
   }
 }
 
-#result_alt .alertbx .cls h6 {
+.alerts > div .alertbx .cls h6 {
   cursor: pointer;
   font-size: calc(28px + 0.5vw);
   margin-top: 15px;
 }
 
 @media screen and (min-width: 900px) {
-  #result_alt .alertbx .cls h6 {
+  .alerts > div .alertbx .cls h6 {
     font-size: calc(32px + 0.5vw);
     margin-top: 18px;
   }
 }
 
 @media screen and (min-width: 1400px) {
-  #result_alt .alertbx .cls h6 {
+  .alerts > div .alertbx .cls h6 {
     font-size: 36px;
     margin-top: 20px;
   }
 }
 
-#result_alt .alertbx .cls h6:hover {
+.alerts > div .alertbx .cls h6:hover {
+  transform: rotateZ(5deg);
+}
+
+.confirms > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.confirms > div .contbx {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  z-index: 2;
+  padding: 30px 0;
+  width: 80%;
+  max-width: 400px;
+}
+
+@media screen and (min-width: 900px) {
+  .confirms > div .contbx {
+    width: 40%;
+    min-width: 400px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .confirms > div .contbx {
+    width: 480px;
+  }
+}
+
+.confirms > div .contbx h4 {
+  font-size: calc(28px + 0.5vw);
+  color: #ffe92d;
+}
+
+@media screen and (min-width: 900px) {
+  .confirms > div .contbx h4 {
+    font-size: calc(28px + 0.5vw);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .confirms > div .contbx h4 {
+    font-size: 48px;
+  }
+}
+
+.confirms > div .contbx img {
+  width: calc(50px + 5vw);
+}
+
+@media screen and (min-width: 900px) {
+  .confirms > div .contbx img {
+    width: calc(60px + 5vw);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .confirms > div .contbx img {
+    width: 120px;
+  }
+}
+
+.confirms > div .contbx p.notice {
+  font-family: "Yeongdo-Rg";
+  font-size: calc(18px + 0.5vw);
+  line-height: 1.5em;
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 900px) {
+  .confirms > div .contbx p.notice {
+    margin-top: 18px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .confirms > div .contbx p.notice {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+}
+
+.confirms > div .contbx p.notice2 {
+  font-family: "Yeongdo-Rg";
+  font-size: calc(16px + 0.5vw);
+  line-height: 1.5em;
+  color: #ffe92d;
+  margin-top: 7.5px;
+}
+
+@media screen and (min-width: 900px) {
+  .confirms > div .contbx p.notice2 {
+    margin-top: 9px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .confirms > div .contbx p.notice2 {
+    font-size: 21px;
+    margin-top: 10px;
+  }
+}
+
+.confirms > div .contbx .con_btn {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 900px) {
+  .confirms > div .contbx .con_btn {
+    max-width: 400px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .confirms > div .contbx .con_btn {
+    max-width: none;
+    width: 60%;
+  }
+}
+
+.confirms > div .contbx .con_btn h6 {
+  cursor: pointer;
+  font-size: calc(28px + 0.5vw);
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 900px) {
+  .confirms > div .contbx .con_btn h6 {
+    font-size: calc(32px + 0.5vw);
+    margin-top: 18px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .confirms > div .contbx .con_btn h6 {
+    font-size: 36px;
+    margin-top: 20px;
+  }
+}
+
+.confirms > div .contbx .con_btn h6:hover {
   transform: rotateZ(5deg);
 }
 

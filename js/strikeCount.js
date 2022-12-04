@@ -9,6 +9,10 @@ function strikeCount(input1, input2, len){
             }
         }
     }
+
+    if(len-count==1&&len>2) {
+        alertCommon(3, count);
+    }
     
     return count;
 }
