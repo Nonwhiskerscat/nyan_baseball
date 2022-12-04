@@ -14,6 +14,11 @@ window.addEventListener('load', function() {
     const tablebtn=document.getElementById('table');
     const retire=document.getElementById('kidcat4');
     const again=document.getElementById('kidcat3');
+
+    const comm$=document.getElementById('common_con');
+    const commYes=comm$.querySelector('.con_btn .yes');
+    const commNo=comm$.querySelector('.con_btn .nope');
+
     
 
     // $second.style.display="none";
@@ -48,6 +53,8 @@ window.addEventListener('load', function() {
             inputEnter();
         })
     }); 
+
+
 
     attack.addEventListener('click', function() {
 
@@ -87,6 +94,7 @@ window.addEventListener('load', function() {
 
     outbtn.querySelector('.store_btn').addEventListener('click', function() {
         tscore=outField(tscore, meow, comAttack);
+
         scoreBoard(tscore);
     });
 
@@ -104,12 +112,15 @@ window.addEventListener('load', function() {
 
     
     retire.addEventListener('click', function() {
-        tscore=confirmCommon(1,tscore);
-        scoreBoard(tscore);
+        confirmCommon(1);        
     })
 
     again.addEventListener('click', function() {
         confirmCommon(2);
+    })
+
+    commYes.addEventListener('click', function() {
+        
     })
 
     

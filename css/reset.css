@@ -34,7 +34,6 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 @media screen and (min-width: 900px) {
   .bighead {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/part1/semi_back.png);
@@ -42,7 +41,6 @@
     background-size: cover;
   }
 }
-
 @media screen and (min-width: 1400px) {
   .bighead {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/part1/background.jpg);
@@ -53,7 +51,7 @@
 
 html, body {
   color: white;
-  font-family: 'IBMPlexSansKR-Regular';
+  font-family: "IBMPlexSansKR-Regular";
 }
 
 h1 {
@@ -98,13 +96,11 @@ input, button {
   width: 90%;
   margin: 0 auto;
 }
-
 @media screen and (min-width: 900px) {
   .container {
     width: 93.75%;
   }
 }
-
 @media screen and (min-width: 1400px) {
   .container {
     max-width: 1180px;

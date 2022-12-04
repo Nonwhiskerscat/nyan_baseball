@@ -98,7 +98,18 @@ function alertCommon(cat, meow, nyan) {
         rstH4.innerHTML=`${myStrike} Strike`;
         rstImg.src='../img/alert/cathappy.png';
         rstNtc.innerHTML=`${strArr[myStrike-2]} 개의 스트를 잡았습니다.! <br> 마지막까지 파이팅!`;
+    }
 
+    if(lolly==4) {
+        rstH4.innerHTML=`Warning`;
+        rstImg.src='../img/alert/catout.png';
+        rstNtc.innerHTML=`점수가 부족하여 <br> 아이템 구매를 할 수 없습니다..`;
+    }
+
+    if(lolly==5) {
+        rstH4.innerHTML=`Warning`;
+        rstImg.src='../img/alert/catout.png';
+        rstNtc.innerHTML=`공격 숫자가 4자리 이상인<BR>경우에만 사용 가능합니다.`;
     }
 
     rstCls.addEventListener('click', function() {

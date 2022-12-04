@@ -225,7 +225,7 @@ body {
             }
         }
 
-        p.notice {
+        p.notice1 {
             font-family: $highlight;
             font-size: calc(18px + 0.5vw);
             line-height: 1.5em;
@@ -242,8 +242,8 @@ body {
         }
 
         p.notice2 {
-            font-family: $highlight;
-            font-size: calc(16px + 0.5vw);
+            font-family: $common_font;
+            font-size: calc(14px + 0.5vw);
             line-height: 1.5em;
             color: $accent;
             margin-top: $tiny_margin_m;
@@ -253,7 +253,7 @@ body {
             }
 
             @include responsive(pc-cat) {
-                font-size: 21px;
+                font-size: 18px;
                 margin-top: $tiny_margin_p;
             }
         }
@@ -1139,6 +1139,31 @@ body {
                         margin-top: $small_margin_p;
                     }
 
+                    @keyframes catswing {
+                        from {
+                            transform: rotateZ(10deg);
+
+                        }
+
+                        to {
+                            transform: rotateZ(-10deg);
+
+                        }
+                    }
+
+                    &:hover {
+                        p {
+                            transform: rotateZ(5deg);
+                        }
+
+                        
+                        img {
+                            animation: catswing 0.5s alternate infinite linear;
+                        }
+                    }
+
+
+
                     img {
                         width: calc(50px + 2vw);
                         margin-right: 20px;
@@ -1153,6 +1178,7 @@ body {
                             margin-top: $small_margin_p;
                             margin-right: 30px;
                         }
+
                     }
 
                     p {
