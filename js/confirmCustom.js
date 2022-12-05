@@ -1,4 +1,4 @@
-function confirmCommon(cat, meow) {
+function confirmCommon(cat, catscore, catlength, kidcat, count) {
     const comm$=document.getElementById('common_con');
     const commH4=comm$.querySelector('.contbx h4');
     // const commImg=comm$.querySelector('.alertbx img')
@@ -8,7 +8,10 @@ function confirmCommon(cat, meow) {
     const commNo=comm$.querySelector('.con_btn .nope');
 
     const lolly=cat;
-    let score=meow;
+    let score=catscore;
+    let comAttack=[...kidcat];
+    let play=count;
+    let length=catlength;
 
     comm$.classList.remove('no');
     document.body.classList.add('no_scroll');
@@ -46,19 +49,30 @@ function confirmCommon(cat, meow) {
     }
 
     commYes.addEventListener('click', function(){
-        if(lolly==1||lolly==2) location.reload();
-        if(lolly==3) {
-            
+
+        switch(lolly) {
+            case 1:             
+                endGame(0, 0, -1, length, comAttack, play);
+                break;
+
+            case 2:
+                location.reload();
+                break;
+
+            case 3:
+                alertResult(6, score, comAttack, 0);
+                break;
+
+            case 4:
+                alertResult(7, score, comAttack, 0);
+                break;
+
+            default:
+                alertResult(8, score, comAttack, 0);
+
         }
 
-        if(lolly==4) {
 
-        }
-
-        if(lolly==5) {
-
-
-        }
 
         comm$.classList.add('no');
         document.body.classList.remove('no_scroll');
@@ -73,8 +87,5 @@ function confirmCommon(cat, meow) {
         document.body.classList.remove('no_scroll');
         document.querySelector('.container').style.touchAction='auto';
     });
-
-    if(commYes.classList.contains('retire')) return 0;
-    else return score;
 
 }

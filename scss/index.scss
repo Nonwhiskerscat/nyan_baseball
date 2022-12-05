@@ -86,6 +86,22 @@ body {
             }
         }
 
+        p.store {
+            font-family: $highlight;
+            font-size: calc(24px + 0.5vw);
+            line-height: 1.5em;
+            margin-top: $small_margin_m;
+
+            @include responsive(semi-cat) {
+                margin-top: $small_margin_s;            
+            }
+
+            @include responsive(pc-cat) {
+                font-size: 30px;
+                margin-top: $small_margin_p;
+            }
+        }
+
         .scorebox {
             display: flex;
             margin: 0 auto;
@@ -1096,6 +1112,15 @@ body {
                                 background-color: rgba($color: #ffffff, $alpha: 0.75);
                                 border-color: rgba($color: #ffffff, $alpha: 0.5);
                                 transition: all 0.5s;
+                            }
+
+                            &.sold {
+                                color: #333;
+                                background-color: rgba($color: #ffffff, $alpha: 0.75);
+                                border-color: rgba($color: #ffffff, $alpha: 0.5);
+                                transition: all 0.5s;
+                                font-weight: 600;
+                                touch-action: none;
                             }
                         }
                     }

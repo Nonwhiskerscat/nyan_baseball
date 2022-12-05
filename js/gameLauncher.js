@@ -15,10 +15,6 @@ window.addEventListener('load', function() {
     const retire=document.getElementById('kidcat4');
     const again=document.getElementById('kidcat3');
 
-    const comm$=document.getElementById('common_con');
-    const commYes=comm$.querySelector('.con_btn .yes');
-    const commNo=comm$.querySelector('.con_btn .nope');
-
     
 
     // $second.style.display="none";
@@ -30,6 +26,10 @@ window.addEventListener('load', function() {
     let play = 0;
     let myOut = 0;
     let outArr= ['원','투','쓰리'];
+    let myAttack=[];
+    let myStrike=0;
+    let myBall=0;
+
 
 
     [].forEach.call(start,function(start){
@@ -55,7 +55,6 @@ window.addEventListener('load', function() {
     }); 
 
 
-
     attack.addEventListener('click', function() {
 
         play++;
@@ -63,9 +62,9 @@ window.addEventListener('load', function() {
         nextFocus(meow);
         offLight();
         
-        let myAttack=attackNumber(meow);
-        let myStrike=strikeCount(comAttack, myAttack, meow);
-        let myBall=ballCount(comAttack, myAttack, meow);
+        myAttack=attackNumber(meow);
+        myStrike=strikeCount(comAttack, myAttack, meow);
+        myBall=ballCount(comAttack, myAttack, meow);
 
         if(outCount(myStrike, myBall)) {
             myOut++;
@@ -89,8 +88,9 @@ window.addEventListener('load', function() {
         tscore=scoreCalculator(tscore, meow, myStrike);
         tscore=endGame(tscore, myOut, myStrike, meow, comAttack, play);
         scoreBoard(tscore);
-
     })
+
+
 
     outbtn.querySelector('.store_btn').addEventListener('click', function() {
         tscore=outField(tscore, meow, comAttack);
@@ -112,15 +112,11 @@ window.addEventListener('load', function() {
 
     
     retire.addEventListener('click', function() {
-        confirmCommon(1);        
+        confirmCommon(1, tscore, meow, comAttack, play);        
     })
 
     again.addEventListener('click', function() {
-        confirmCommon(2);
-    })
-
-    commYes.addEventListener('click', function() {
-        
+        confirmCommon(2, tscore, meow, comAttack, play);
     })
 
     

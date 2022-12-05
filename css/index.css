@@ -206,6 +206,23 @@ body {
     margin-top: 20px;
   }
 }
+.alerts > div .alertbx p.store {
+  font-family: "Yeongdo-Rg";
+  font-size: calc(24px + 0.5vw);
+  line-height: 1.5em;
+  margin-top: 15px;
+}
+@media screen and (min-width: 900px) {
+  .alerts > div .alertbx p.store {
+    margin-top: 18px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .alerts > div .alertbx p.store {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+}
 .alerts > div .alertbx .scorebox {
   display: flex;
   margin: 0 auto;
@@ -1116,6 +1133,14 @@ body {
   background-color: rgba(255, 255, 255, 0.75);
   border-color: rgba(255, 255, 255, 0.5);
   transition: all 0.5s;
+}
+.third_screen .info .semi_info .part5 .store > div div.store_btn.sold {
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.5s;
+  font-weight: 600;
+  touch-action: none;
 }
 .third_screen .info .semi_info .part6 {
   text-align: center;
