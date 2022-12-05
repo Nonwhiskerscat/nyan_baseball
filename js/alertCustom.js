@@ -45,7 +45,6 @@ function alertResult(cat, escore, earr, etry) {
         outres.querySelector('.store_btn').classList.add('sold');
         outres.querySelector('.price').style.display='none';
         outres.querySelector('.sold_out').style.display='block';
-        score=score-5000;
 
     }
 
@@ -57,7 +56,6 @@ function alertResult(cat, escore, earr, etry) {
         inneres.querySelector('.store_btn').classList.add('sold');
         inneres.querySelector('.price').style.display='none';
         inneres.querySelector('.sold_out').style.display='block';
-        score=score-8000;
 
     }
 
@@ -72,7 +70,6 @@ function alertResult(cat, escore, earr, etry) {
         tables.querySelector('.store_btn').classList.add('sold');
         tables.querySelector('.price').style.display='none';
         tables.querySelector('.sold_out').style.display='block';
-        score=score-20000;
     }
 
     else {
