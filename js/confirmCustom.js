@@ -45,10 +45,10 @@ function confirmCommon(cat, catscore, catlength, kidcat, count) {
     if(lolly==5) {
         commH4.innerHTML='Table Seat';
         commNtc.innerHTML=`테이블석 힌트를 사용하시겠습니까?`;
-        commNtc2.innerHTML=`태이블석 힌트는 <br>임의의 숫자 2개와 위치가 공개됩니다.`;
+        commNtc2.innerHTML=`테이블석 힌트는 <br>임의의 숫자 2개와 위치가 공개됩니다.`;
     }
 
-    commYes.addEventListener('click', function(){
+    score=commYes.addEventListener('click', function(){
 
         switch(lolly) {
             case 1:             
@@ -60,29 +60,35 @@ function confirmCommon(cat, catscore, catlength, kidcat, count) {
                 break;
 
             case 3:
-                alertResult(6, score, comAttack, 0);
+                commYes.classList.add('outFd');
+                score=alertResult(6, score, comAttack, 0);
                 break;
 
             case 4:
-                alertResult(7, score, comAttack, 0);
+                commYes.classList.add('inFd');
+                score=alertResult(7, score, comAttack, 0);
                 break;
 
             default:
-                alertResult(8, score, comAttack, 0);
+                commYes.classList.add('tableSt');
+                score=alertResult(8, score, comAttack, 0);
 
         }
-
-
 
         comm$.classList.add('no');
         document.body.classList.remove('no_scroll');
         document.querySelector('.container').style.touchAction='auto';
 
+        
 
     }, );
 
 
+
+
+
     commNo.addEventListener('click', function(){
+
         comm$.classList.add('no');
         document.body.classList.remove('no_scroll');
         document.querySelector('.container').style.touchAction='auto';

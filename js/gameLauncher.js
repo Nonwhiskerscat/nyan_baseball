@@ -15,6 +15,10 @@ window.addEventListener('load', function() {
     const retire=document.getElementById('kidcat4');
     const again=document.getElementById('kidcat3');
 
+    const comm$=document.getElementById('common_con');
+    const commYes=comm$.querySelector('.con_btn .yes');
+
+
     
 
     // $second.style.display="none";
@@ -22,7 +26,7 @@ window.addEventListener('load', function() {
 
     let comAttack=[];
     let meow = 0;
-    let tscore = 0;
+    let tscore;
     let play = 0;
     let myOut = 0;
     let outArr= ['원','투','쓰리'];
@@ -66,6 +70,8 @@ window.addEventListener('load', function() {
         myStrike=strikeCount(comAttack, myAttack, meow);
         myBall=ballCount(comAttack, myAttack, meow);
 
+        
+        
         if(outCount(myStrike, myBall)) {
             myOut++;
             outLight(myOut);
@@ -74,6 +80,23 @@ window.addEventListener('load', function() {
             }
             tscore=outScore(tscore);
         }
+        
+        
+        if(commYes.classList.contains('outFd')) {
+            tscore=tscore-5000;
+            commYes.classList.remove('outFd');
+        }
+
+        if(commYes.classList.contains('inFd')) {
+            tscore=tscore-8000;
+            commYes.classList.remove('inFd');
+        }
+
+        if(commYes.classList.contains('tableSt')) {
+            tscore=tscore-20000;
+            commYes.classList.remove('tableSt');
+        }
+
 
         console.log(myAttack);
         // tscore=numberChecker(comAttack, myAttack, meow, tscore);

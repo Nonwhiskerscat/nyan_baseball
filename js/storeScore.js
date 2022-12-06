@@ -1,10 +1,11 @@
 function outField(neko, meow, kidcat, play) {
     const outres=document.getElementById('outer');
+    const comm$=document.getElementById('common_con');
+    const commYes=comm$.querySelector('.con_btn .yes');
 
     let score=neko;
     let newarr=[...kidcat];
 
-    
     if(outres.querySelector('.store_btn').classList.contains('sold')) {
         alertCommon(6);
     }
@@ -15,11 +16,16 @@ function outField(neko, meow, kidcat, play) {
     else {
         confirmCommon(3, score, meow, newarr, play);
     }
+
+    if(commYes.classList.contains('outFd')) score-=5000;
+
     return score;
 }
 
 function inField(neko, meow, kidcat, play) {
     const inneres=document.getElementById('inner');
+    const comm$=document.getElementById('common_con');
+    const commYes=comm$.querySelector('.con_btn .yes');
 
     let score=neko;
     let newarr=[...kidcat];
@@ -36,11 +42,16 @@ function inField(neko, meow, kidcat, play) {
         confirmCommon(4, score, meow, newarr, play);
 
     }
+
+    if(commYes.classList.contains('inFd')) score-=8000;
+
     return score;
 }
 
 function tableSeat(neko, meow, kidcat, play) {
     const tables=document.getElementById('table');
+    const comm$=document.getElementById('common_con');
+    const commYes=comm$.querySelector('.con_btn .yes');
 
     let score=neko;
     let newarr=[...kidcat];
@@ -59,5 +70,8 @@ function tableSeat(neko, meow, kidcat, play) {
     else {
         confirmCommon(5, score, meow, newarr, play);
     }
+
+    if(commYes.classList.contains('tableSt')) score-=20000;
+
     return score;
 }

@@ -13,8 +13,10 @@ function alertResult(cat, escore, earr, etry) {
     const inneres=document.getElementById('inner');
     const tables=document.getElementById('table');
 
+
+
     const lolly=cat;
-    const score=escore;
+    let score=escore;
     const com=earr;
     const trial=etry;
     const arrKor=['첫', '두', '세', '네', '다섯', '여섯', '일곱', '여덟'];
@@ -24,7 +26,7 @@ function alertResult(cat, escore, earr, etry) {
     let n2=Math.floor(Math.random()*com.length);
 
     while(n1==n2) {
-        n2=Math.round(Math.random()*com.length);
+        n2=Math.floor(Math.random()*com.length);
     }
 
     rst$.classList.remove('no');
@@ -45,6 +47,7 @@ function alertResult(cat, escore, earr, etry) {
         outres.querySelector('.store_btn').classList.add('sold');
         outres.querySelector('.price').style.display='none';
         outres.querySelector('.sold_out').style.display='block';
+        score-=5000;
 
     }
 
