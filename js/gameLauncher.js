@@ -2,12 +2,12 @@ window.addEventListener('load', function() {
 
     const $bighead=this.document.querySelector('.bighead');
 
-    const $first=document.querySelector('.first_screen');
     const start=document.getElementById('cat').querySelectorAll('button');
-
+    
+    const $first=document.querySelector('.first_screen');
     const $second=document.querySelector('.second_screen');
-
     const $third=document.querySelector('.third_screen');
+
     const attack=document.getElementById('kidcat2');
     const outbtn=document.getElementById('outer');
     const inbtn=document.getElementById('inner');
@@ -18,11 +18,39 @@ window.addEventListener('load', function() {
     const comm$=document.getElementById('common_con');
     const commYes=comm$.querySelector('.con_btn .yes');
 
+    const kidcatpage=document.querySelectorAll('.kidcatpage');
+    const secondpage=document.querySelector('.how');
+    const firstpage=document.querySelector('.lobby');
+    
+    //처음화면->게임화면
+    // $first.style.display="none";
+    $second.style.display="none";
+    $third.style.display="none";
+    
+    //개발자 페이지행
+
+    [].forEach.call(kidcatpage, function(kidcatpage){
+        kidcatpage.addEventListener('click', function() {
+            location.href='http://nonwhiskerscat.dothome.co.kr/'
+        });
+    });
+
+    //처음화면->게임방법
+    secondpage.addEventListener('click', function() {
+        $first.style.display="none";
+        $second.style.display="block";
+        $bighead.style.alignItems="flex-start";
+    })
+
+    //게임방법->처음화면
+    firstpage.addEventListener('click', function() {
+        $first.style.display="block";
+        $second.style.display="none";
+        $bighead.style.alignItems="center";
+    })
+
 
     
-
-    // $second.style.display="none";
-    $third.style.display="none";
 
     let comAttack=[];
     let meow = 0;
@@ -56,6 +84,7 @@ window.addEventListener('load', function() {
             nextFocus(meow);
             inputEnter();
         })
+
     }); 
 
 

@@ -604,6 +604,208 @@ body {
   }
 }
 
+.second_screen {
+  margin-top: 30px;
+}
+@media screen and (min-width: 900px) {
+  .second_screen {
+    margin-top: 35px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .second_screen {
+    margin-top: 40px;
+  }
+}
+.second_screen .htp h2 {
+  font-size: calc(24px + 1vw);
+  text-align: center;
+}
+@media screen and (min-width: 900px) {
+  .second_screen .htp h2 {
+    font-size: calc(24px + 1vw);
+  }
+}
+@media screen and (min-width: 1400px) {
+  .second_screen .htp h2 {
+    font-size: 60px;
+  }
+}
+.second_screen .htp ul {
+  margin-top: 15px;
+}
+@media screen and (min-width: 900px) {
+  .second_screen .htp ul {
+    margin-top: 18px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .second_screen .htp ul {
+    margin-top: 20px;
+  }
+}
+.second_screen .htp ul li {
+  font-family: "Yeongdo-Rg";
+  text-align: justify;
+  font-size: calc(14px + 0.5vw);
+  line-height: calc(28px + 0.5vw);
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 900px) {
+  .second_screen .htp ul li {
+    font-size: calc(16px + 0.5vw);
+    line-height: calc(32px + 0.5vw);
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .second_screen .htp ul li {
+    font-size: 22px;
+    line-height: 40px;
+    margin-bottom: 12px;
+  }
+}
+.second_screen .htp ul li .highlight {
+  color: #fffc00;
+}
+.second_screen .htp ul li .ex_photos {
+  margin: 30px 0;
+}
+@media screen and (min-width: 900px) {
+  .second_screen .htp ul li .ex_photos {
+    margin: 35px 0;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .second_screen .htp ul li .ex_photos {
+    margin: 40px 0;
+  }
+}
+.second_screen .htp ul li .ex_photos .ex_photo_flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+@media screen and (min-width: 900px) {
+  .second_screen .htp ul li .ex_photos .ex_photo_flex {
+    flex-direction: row;
+  }
+}
+.second_screen .htp ul li .ex_photos .ex_photo_flex > div {
+  width: 100%;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 900px) {
+  .second_screen .htp ul li .ex_photos .ex_photo_flex > div {
+    width: 30%;
+    margin-bottom: 0;
+  }
+}
+.second_screen .htp ul li .ex_photos .ex_photo_flex > div img {
+  width: 70%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (min-width: 900px) {
+  .second_screen .htp ul li .ex_photos .ex_photo_flex > div img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .second_screen .htp ul li .ex_photos .ex_photo_flex > div img {
+    width: 380px;
+  }
+}
+.second_screen .htp ul li .ex_photos .ex_photo_flex > div p {
+  font-family: "IBMPlexSansKR-Regular";
+  margin-top: 7.5px;
+  font-size: calc(10px + 1vw);
+}
+@media screen and (min-width: 900px) {
+  .second_screen .htp ul li .ex_photos .ex_photo_flex > div p {
+    margin-top: 9px;
+    font-size: calc(10px + 0.5vw);
+  }
+}
+@media screen and (min-width: 1400px) {
+  .second_screen .htp ul li .ex_photos .ex_photo_flex > div p {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+}
+.second_screen .htp ul li .ex_photos .ex_photo_flex > div p .ex_bold {
+  font-family: "IBMPlexSansKR-Medium";
+  font-weight: 600;
+  color: #fffc00;
+  margin-right: 0.5rem;
+}
+.second_screen .htp .second_btn {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 85%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+@media screen and (min-width: 900px) {
+  .second_screen .htp .second_btn {
+    width: 60%;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    max-width: none;
+    min-width: 500px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .second_screen .htp .second_btn {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    min-width: none;
+    width: 830px;
+  }
+}
+.second_screen .htp .second_btn .btn2_flex {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.second_screen .htp .second_btn .btn2_flex:hover p {
+  transform: rotateZ(5deg);
+}
+.second_screen .htp .second_btn .btn2_flex img {
+  width: calc(30px + 2vw);
+  margin-right: 10px;
+}
+@media screen and (min-width: 900px) {
+  .second_screen .htp .second_btn .btn2_flex img {
+    font-size: calc(30px + 1vw);
+  }
+}
+@media screen and (min-width: 1400px) {
+  .second_screen .htp .second_btn .btn2_flex img {
+    text-align: justify;
+  }
+}
+.second_screen .htp .second_btn .btn2_flex p {
+  font-family: "Yeongdo-Rg";
+  color: white;
+  text-align: center;
+  font-size: calc(16px + 1vw);
+}
+@media screen and (min-width: 900px) {
+  .second_screen .htp .second_btn .btn2_flex p {
+    font-size: calc(24px + 1vw);
+  }
+}
+@media screen and (min-width: 1400px) {
+  .second_screen .htp .second_btn .btn2_flex p {
+    text-align: justify;
+  }
+}
+
 .third_screen {
   margin-top: 50px;
 }

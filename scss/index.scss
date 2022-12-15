@@ -536,6 +536,242 @@ body {
 
 }
 
+.second_screen {
+    margin-top: $mid_margin_m;
+
+    @include responsive(semi-cat) {
+        margin-top: $mid_margin_s;
+
+    }
+
+    @include responsive(pc-cat) {
+        margin-top: $mid_margin_p;
+
+    }
+
+    .htp {
+        h2 {
+            font-size: calc(24px + 1vw);
+            text-align: center;
+
+            @include responsive(semi-cat) {
+                font-size: calc(24px + 1vw);
+            }
+        
+            @include responsive(pc-cat) {
+                font-size: 60px;
+            }
+        }
+
+        ul {
+            margin-top: $small_margin_m;
+
+            @include responsive(semi-cat) {
+                margin-top: $small_margin_s;
+            }
+        
+            @include responsive(pc-cat) {
+                margin-top: $small_margin_p;
+            }
+
+            li {
+                font-family: $highlight;
+                text-align: justify;
+                font-size: calc(14px + 0.5vw);
+                line-height: calc(28px + 0.5vw);
+                margin-bottom: 8px;
+
+                @include responsive(semi-cat) {
+                    font-size: calc(16px + 0.5vw);
+                    line-height: calc(32px + 0.5vw);
+                    margin-bottom: 10px;
+                }
+            
+                @include responsive(pc-cat) {
+                    font-size: 22px;
+                    line-height: 40px;
+                    margin-bottom: 12px;
+                }
+
+                .highlight {
+                    color: $strike;
+                }
+
+
+                .ex_photos {
+                    margin: $mid_margin_m 0;
+
+                    @include responsive(semi-cat) {
+                        margin: $mid_margin_s 0;
+                    }
+                
+                    @include responsive(pc-cat) {
+                        margin: $mid_margin_p 0;
+                    }
+
+                    .ex_photo_flex {
+
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        text-align: center;
+
+
+                        @include responsive(semi-cat) {
+                            flex-direction: row;
+                        }
+                    
+                        @include responsive(pc-cat) {
+                            //
+                        }
+
+                        &>div {
+                            width: 100%;
+                            margin-bottom: $small_margin_m;
+
+                            @include responsive(semi-cat) {
+                                width: 30%;
+                                margin-bottom: 0;
+
+                            }
+                        
+                            @include responsive(pc-cat) {
+
+                            }
+
+                            img {
+                                width: 70%;
+                                max-width: 400px;
+                                display: block;
+                                margin: 0 auto;
+
+                                @include responsive(semi-cat) {
+                                    width: 100%;
+    
+                                }
+                            
+                                @include responsive(pc-cat) {
+                                    width: 380px;
+                                }
+                            }
+
+                            p {
+                                font-family: $common_font;
+                                margin-top: $tiny_margin_m;
+                                font-size: calc(10px + 1vw);
+                                
+
+                                @include responsive(semi-cat) {
+                                    margin-top: $tiny_margin_s;
+                                    font-size: calc(10px + 0.5vw);
+    
+                                }
+                            
+                                @include responsive(pc-cat) {
+                                    margin-top: $tiny_margin_p;
+                                    font-size: 16px;
+
+                                }
+
+                                .ex_bold {
+                                    font-family: $common_med;
+                                    font-weight: 600;
+                                    color: $strike;
+                                    margin-right: 0.5rem;
+                                }
+
+                            }
+                            
+                            
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .second_btn {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            width: 85%;
+            margin-top: $mid_margin_m;
+            margin-bottom: $mid_margin_m;
+            max-width: 400px;
+    
+            @include responsive(semi-cat) {
+                width: 60%;
+                margin-top: $mid_margin_s;
+                margin-bottom: $mid_margin_s;
+                max-width: none;
+                min-width: 500px;
+    
+            }
+    
+            @include responsive(pc-cat) {
+                margin-top: $mid_margin_p;
+                margin-bottom: $mid_margin_p;
+                min-width: none;
+                width: 830px;
+            }
+            
+            .btn2_flex {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+    
+                @include responsive(semi-cat) {
+                    //
+                }
+    
+                @include responsive(pc-cat) {
+                    //
+                }
+
+                &:hover {
+                    p {
+                        transform: rotateZ(5deg);
+                    }
+                }
+    
+                img {
+                    width: calc(30px + 2vw);
+                    margin-right: 10px;
+    
+                    @include responsive(semi-cat) {
+                        font-size: calc(30px + 1vw);
+    
+                    }
+        
+                    @include responsive(pc-cat) {
+                        text-align: justify;
+                    }
+                }
+    
+                p {
+                    font-family: $highlight;
+                    color: white;
+                    text-align: center;
+                    font-size: calc(16px + 1vw);
+    
+                    @include responsive(semi-cat) {
+                        font-size: calc(24px + 1vw);
+    
+                    }
+        
+                    @include responsive(pc-cat) {
+                        text-align: justify;
+                    }
+
+
+                }
+            }
+        }
+    }
+
+
+}
+
 
 
 
