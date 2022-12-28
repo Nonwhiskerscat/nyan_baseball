@@ -1,5 +1,4 @@
 function inputMaker(cat) {
-    console.log(`실행중 ${cat}`);
     const inkitty= document.querySelector('.kitty');
     let link='';
     link +='<div class="kitty_flex">';

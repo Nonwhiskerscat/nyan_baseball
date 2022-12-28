@@ -73,7 +73,6 @@ window.addEventListener('load', function() {
             }
             let com=startCheck(meow);
             comAttack=[...com];
-            console.log(comAttack);
             $first.style.display="none";
             $third.style.display="block";
             $bighead.style.alignItems="flex-start";
@@ -127,7 +126,6 @@ window.addEventListener('load', function() {
         }
 
 
-        console.log(myAttack);
         // tscore=numberChecker(comAttack, myAttack, meow, tscore);
 
         ballLight(myBall);
